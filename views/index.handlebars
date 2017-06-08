@@ -10,8 +10,8 @@
           <li>
             {{this.burger_name}}
 
-            <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-              <input type="hidden" name="devoured" value="true">
+            <form method="POST" action="/burgers/update/{{this.id}}?_method=PUT">
+              <input type="hidden" type="text" name="burger_id" value={{this.id}}>
               <button type="submit">Eat</button>
             </form>
 
